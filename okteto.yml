@@ -1,0 +1,12 @@
+build:
+ dags-denisags:  # cambiar por su namespace de okteto
+   image: okteto.dev/dags-denisags:latest  # cambiar por su namespace de okteto
+
+deploy:
+ - okteto build # build the image with the latest code
+ - kubectl apply -f manifests # create all the resources in kubernetes
+dev:
+ dags-denisags:
+   command: bash
+   sync:
+   - .:/cars   # cambiar por su proyecto
