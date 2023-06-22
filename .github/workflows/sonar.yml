@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  main:
+  master:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout ci-cd branch
